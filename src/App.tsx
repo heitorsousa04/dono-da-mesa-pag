@@ -28,35 +28,61 @@ const TextureOverlay = () => (
 );
 
 function HeroSection() {
+  const [playing, setPlaying] = useState(false);
+
   return (
-    <section className="relative w-full bg-[#080C0A] min-h-[95vh] flex flex-col items-center justify-center text-center px-4 overflow-hidden pt-16 pb-24">
+    <section className="relative w-full bg-[#080C0A] min-h-[95vh] flex flex-col items-center justify-center text-center px-4 overflow-hidden pt-16 pb-16">
       <TextureOverlay />
 
       <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center mt-4">
         
-        {/* Neon Logo Area */}
-        <div className="mb-10 inline-block">
-          <h2 className="text-[#00E575] font-black tracking-[0.2em] uppercase text-2xl md:text-4xl drop-shadow-[0_0_20px_rgba(0,229,117,1)]">
-            Dono da Mesa
-          </h2>
+        {/* Logo Area */}
+        <div className="border-2 border-[#00E575]/40 rounded-2xl p-3 mb-10 inline-block shadow-[0_0_20px_rgba(0,229,117,0.2)]">
+          <img 
+            src="https://res.cloudinary.com/dtcjxw6ax/image/upload/q_auto/f_auto/v1776898098/Professional_gaming_logo_202604201552_z9i3rr.jpg" 
+            alt="Dono da Mesa"
+            className="w-48 md:w-64 mx-auto" 
+          />
         </div>
 
-        {/* Image - Faded edges merging into the dark background */}
-        <div className="w-full max-w-3xl aspect-[16/9] mb-12 relative flex items-center justify-center rounded-lg overflow-hidden border border-[#1A1A1A]">
-            <img 
-              src="https://res.cloudinary.com/dtcjxw6ax/image/upload/q_auto/f_auto/v1776709543/Realistic_photography__professional_202604201523_lp5m42.jpg" 
-              alt="Rapaz jogando sinuca" 
-              className="absolute inset-0 w-full h-full object-cover opacity-90"
-            />
+        <p className="text-[#00E575] font-black uppercase tracking-widest text-sm md:text-base mb-8 border border-[#00E575]/30 rounded-full px-6 py-2 inline-block">
+          👇🏻 Veja o que você recebe dentro do guia
+        </p>
+
+        {/* Video VSL */}
+        <div className="relative w-full max-w-3xl mx-auto mb-4 cursor-pointer group" onClick={(e) => {
+          const video = e.currentTarget.querySelector('video') as HTMLVideoElement;
+          video.muted = false;
+          if (video.paused) { video.play(); setPlaying(true); } 
+          else { video.pause(); setPlaying(false); }
+        }}>
+          <video
+            src="https://res.cloudinary.com/dtcjxw6ax/video/upload/q_auto/f_auto/v1776898182/VSL_PROD_SIN_mjzmsi.mov"
+            muted
+            playsInline
+            loop
+            disablePictureInPicture
+            controlsList="nodownload nofullscreen noremoteplayback noplaybackrate"
+            onContextMenu={(e) => e.preventDefault()}
+            className="w-full rounded-xl shadow-[0_0_40px_rgba(0,229,117,0.3)] border-2 border-[#00E575]/40"
+          />
+          {!playing && (
+            <div className="absolute inset-0 flex flex-col items-center justify-center rounded-xl bg-black/50">
+              <div className="w-20 h-20 rounded-full bg-[#00E575] flex items-center justify-center shadow-[0_0_40px_rgba(0,229,117,0.8)] mb-4">
+                <div className="w-0 h-0 border-t-[14px] border-t-transparent border-l-[26px] border-l-black border-b-[14px] border-b-transparent ml-2" />
+              </div>
+              <p className="text-white font-black text-lg uppercase tracking-widest drop-shadow-lg">Toque para assistir</p>
+            </div>
+          )}
         </div>
 
         {/* Headline */}
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight mb-8">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-black text-white leading-tight tracking-tight mb-8">
           O Guia Que Fará Você <span className="text-[#00E575] drop-shadow-[0_0_15px_rgba(0,229,117,0.8)]">Dominar</span> Qualquer Mesa de Sinuca de Bar
         </h1>
 
         {/* Sub-headline */}
-        <p className="text-xl md:text-2xl text-white max-w-3xl mx-auto mb-12 font-semibold leading-relaxed">
+        <p className="text-lg md:text-xl text-white max-w-3xl mx-auto mb-12 font-semibold leading-relaxed">
           Aprenda as técnicas avançadas para não dar chance ao adversário e ser o dono da mesa, sem depender de sorte.
         </p>
 
@@ -65,7 +91,7 @@ function HeroSection() {
           onClick={() => window.open('https://pay.wiapy.com/ZtGdHhm7C6', '_blank')}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="bg-[#FFC500] text-black font-black text-xl md:text-2xl px-10 py-5 rounded-md uppercase tracking-widest
+          className="bg-[#FFC500] text-black font-black text-lg md:text-xl px-10 py-5 rounded-md uppercase tracking-widest
                      shadow-[0_0_30px_rgba(255,197,0,0.6)] hover:bg-[#ffce33] transition-all w-fit mx-auto border-b-4 border-[#cc9e00]"
         >
           Quero Dominar a Mesa Agora
@@ -77,40 +103,40 @@ function HeroSection() {
 
 function PainSection() {
   return (
-    <section className="w-full bg-[#1A1A1A] text-white py-24 px-4 overflow-hidden relative border-y-2 border-[#00E575]/20">
+    <section className="w-full bg-[#1A1A1A] text-white py-16 px-4 overflow-hidden relative border-y-2 border-[#00E575]/20">
       <TextureOverlay />
       <div className="max-w-6xl mx-auto text-center relative z-10">
         
-        <h2 className="text-3xl md:text-5xl font-black mb-8 leading-tight text-[#FFC500] drop-shadow-[0_0_15px_rgba(255,197,0,0.5)] max-w-4xl mx-auto">
+        <h2 className="text-2xl md:text-4xl font-black mb-8 leading-tight text-[#FFC500] drop-shadow-[0_0_15px_rgba(255,197,0,0.5)] max-w-4xl mx-auto">
           Chega de ser o cara que só paga a mesa pro vencedor.
         </h2>
         
-        <p className="text-xl md:text-2xl text-white leading-relaxed text-center max-w-4xl mx-auto font-semibold mb-20 drop-shadow-sm">
+        <p className="text-lg md:text-xl text-white leading-relaxed text-center max-w-4xl mx-auto font-semibold mb-20 drop-shadow-sm">
           Você sabe como segurar o taco e conhece o jogo. O problema não é falta de talento, é a falta de técnica na hora da pressão. O que mais te derruba hoje?
         </p>
 
         {/* Icons Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
           
-          <div className="flex flex-col items-center bg-[#080C0A] p-8 md:p-10 rounded-2xl border-t-4 border-[#00E575] shadow-[0_0_30px_rgba(0,0,0,0.8)]">
-            <TrendingDown size={72} className="text-[#00E575] drop-shadow-[0_0_25px_rgba(0,229,117,1)] mb-8" />
-            <h3 className="text-xl md:text-2xl font-black text-white mb-6 uppercase tracking-wider text-center drop-shadow-sm">Falta de Consistência</h3>
+          <div className="flex flex-col items-center bg-[#080C0A] p-6 md:p-10 rounded-2xl border-t-4 border-[#00E575] shadow-[0_0_30px_rgba(0,0,0,0.8)]">
+            <TrendingDown size={48} className="text-[#00E575] drop-shadow-[0_0_25px_rgba(0,229,117,1)] mb-8" />
+            <h3 className="text-lg md:text-xl font-black text-white mb-6 uppercase tracking-wider text-center drop-shadow-sm">Falta de Consistência</h3>
             <p className="text-white font-medium text-lg leading-relaxed text-center">
               Você acerta uma bola impossível de bico, mas logo em seguida erra a bola mais fácil do jogo e entrega a vitória de bandeja.
             </p>
           </div>
 
-          <div className="flex flex-col items-center bg-[#080C0A] p-8 md:p-10 rounded-2xl border-t-4 border-[#00E575] shadow-[0_0_30px_rgba(0,0,0,0.8)]">
-            <XCircle size={72} className="text-[#00E575] drop-shadow-[0_0_25px_rgba(0,229,117,1)] mb-8" />
-            <h3 className="text-xl md:text-2xl font-black text-white mb-6 uppercase tracking-wider text-center drop-shadow-sm">Erros Bobos e Suicídios</h3>
+          <div className="flex flex-col items-center bg-[#080C0A] p-6 md:p-10 rounded-2xl border-t-4 border-[#00E575] shadow-[0_0_30px_rgba(0,0,0,0.8)]">
+            <XCircle size={48} className="text-[#00E575] drop-shadow-[0_0_25px_rgba(0,229,117,1)] mb-8" />
+            <h3 className="text-lg md:text-xl font-black text-white mb-6 uppercase tracking-wider text-center drop-shadow-sm">Erros Bobos e Suicídios</h3>
             <p className="text-white font-medium text-lg leading-relaxed text-center">
               Você perde a vez porque o bolão sempre para colado na tabela ou cai na caçapa junto com a bola da vez.
             </p>
           </div>
 
-          <div className="flex flex-col items-center bg-[#080C0A] p-8 md:p-10 rounded-2xl border-t-4 border-[#00E575] shadow-[0_0_30px_rgba(0,0,0,0.8)]">
-            <Crosshair size={72} className="text-[#00E575] drop-shadow-[0_0_25px_rgba(0,229,117,1)] mb-8" />
-            <h3 className="text-xl md:text-2xl font-black text-white mb-6 uppercase tracking-wider text-center drop-shadow-sm">Instinto vs Técnica</h3>
+          <div className="flex flex-col items-center bg-[#080C0A] p-6 md:p-10 rounded-2xl border-t-4 border-[#00E575] shadow-[0_0_30px_rgba(0,0,0,0.8)]">
+            <Crosshair size={48} className="text-[#00E575] drop-shadow-[0_0_25px_rgba(0,229,117,1)] mb-8" />
+            <h3 className="text-lg md:text-xl font-black text-white mb-6 uppercase tracking-wider text-center drop-shadow-sm">Instinto vs Técnica</h3>
             <p className="text-white font-medium text-lg leading-relaxed text-center">
               Jogar contando apenas com a sorte funciona de vez em quando, mas não te sustenta contra os caras de alto nível no mata-mata.
             </p>
@@ -134,15 +160,15 @@ function SolutionSection() {
   ];
 
   return (
-    <section className="w-full bg-[#080C0A] py-24 px-4 text-white relative">
+    <section className="w-full bg-[#080C0A] py-16 px-4 text-white relative">
       <TextureOverlay />
       <div className="max-w-5xl mx-auto relative z-10">
         
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-black mb-6 text-white leading-tight">
+          <h2 className="text-2xl md:text-4xl font-black mb-6 text-white leading-tight">
             Tudo o que você precisa para <span className="text-[#00E575] drop-shadow-[0_0_20px_rgba(0,229,117,0.7)]">mudar de nível</span> hoje:
           </h2>
-          <p className="text-white max-w-3xl mx-auto text-xl md:text-2xl font-bold">
+          <p className="text-white max-w-3xl mx-auto text-lg md:text-xl font-bold">
             Sem enrolação. Direto ao ponto para você ler e já aplicar na próxima partida.
           </p>
         </div>
@@ -158,7 +184,7 @@ function SolutionSection() {
               className="flex items-center gap-6 bg-[#1A1A1A] p-6 md:p-8 rounded-md border border-[#333]"
             >
               <CheckCircle2 className="text-[#00E575] drop-shadow-[0_0_15px_rgba(0,229,117,0.9)] shrink-0" size={36} />
-              <span className="text-white text-xl md:text-2xl font-bold leading-tight">{item}</span>
+              <span className="text-white text-lg md:text-xl font-bold leading-tight">{item}</span>
             </motion.div>
           ))}
         </div>
@@ -179,11 +205,11 @@ function SocialProofSection() {
   const next = () => setCurrentIndex(c => (c === images.length - 1 ? 0 : c + 1));
 
   return (
-    <section className="w-full bg-[#1A1A1A] py-24 text-white overflow-hidden relative border-y-2 border-[#FFC500]/20">
+    <section className="w-full bg-[#1A1A1A] py-16 text-white overflow-hidden relative border-y-2 border-[#FFC500]/20">
       <TextureOverlay />
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16 px-4 max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-black text-[#FFC500] drop-shadow-[0_0_15px_rgba(255,197,0,0.5)] tracking-tight mb-6">
+          <h2 className="text-2xl md:text-4xl font-black text-[#FFC500] drop-shadow-[0_0_15px_rgba(255,197,0,0.5)] tracking-tight mb-6">
             O que a galera está falando...
           </h2>
         </div>
@@ -216,11 +242,11 @@ function SocialProofSection() {
 
 function FinalOfferSection() {
   return (
-    <section className="w-full relative py-32 px-4 overflow-hidden bg-[#080C0A]">
+    <section className="w-full relative py-20 px-4 overflow-hidden bg-[#080C0A]">
       <TextureOverlay />
       
       <div className="relative z-10 max-w-4xl mx-auto text-center">
-        <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white mb-16 leading-tight drop-shadow-xl">
+        <h2 className="text-2xl md:text-4xl lg:text-5xl font-black text-white mb-16 leading-tight drop-shadow-xl">
           Eleve o seu nível por menos que o preço de uma cerveja.
         </h2>
         
@@ -233,30 +259,30 @@ function FinalOfferSection() {
 
           <ul className="text-left space-y-8 mb-16 max-w-2xl mx-auto">
             <li className="flex items-center gap-5">
-              <CheckCircle2 className="text-[#00E575] shrink-0 drop-shadow-[0_0_15px_rgba(0,229,117,0.9)]" size={40} />
+              <CheckCircle2 className="text-[#00E575] shrink-0 drop-shadow-[0_0_15px_rgba(0,229,117,0.9)]" size={28} />
               <span className="text-white text-xl md:text-3xl font-bold">O Guia Principal: Dono da Mesa (Acesso VIP)</span>
             </li>
             <li className="flex items-center gap-5">
-              <Gift className="text-[#FFC500] shrink-0 drop-shadow-[0_0_12px_rgba(255,197,0,0.8)]" size={40} />
-              <span className="text-white text-xl md:text-2xl font-semibold"><strong>Bônus 1:</strong> O Jogo Mental - Como vencer a pressão</span>
+              <Gift className="text-[#FFC500] shrink-0 drop-shadow-[0_0_12px_rgba(255,197,0,0.8)]" size={28} />
+              <span className="text-white text-lg md:text-xl font-semibold"><strong>Bônus 1:</strong> O Jogo Mental - Como vencer a pressão</span>
             </li>
             <li className="flex items-center gap-5">
-              <Gift className="text-[#FFC500] shrink-0 drop-shadow-[0_0_12px_rgba(255,197,0,0.8)]" size={40} />
-              <span className="text-white text-xl md:text-2xl font-semibold"><strong>Bônus 2:</strong> Estratégia Avançada e Leitura de Jogo</span>
+              <Gift className="text-[#FFC500] shrink-0 drop-shadow-[0_0_12px_rgba(255,197,0,0.8)]" size={28} />
+              <span className="text-white text-lg md:text-xl font-semibold"><strong>Bônus 2:</strong> Estratégia Avançada e Leitura de Jogo</span>
             </li>
             <li className="flex items-center gap-5">
-              <Gift className="text-[#FFC500] shrink-0 drop-shadow-[0_0_12px_rgba(255,197,0,0.8)]" size={40} />
-              <span className="text-white text-xl md:text-2xl font-semibold"><strong>Bônus 3:</strong> Rotina de Treino (30 min/dia para evoluir rápido)</span>
+              <Gift className="text-[#FFC500] shrink-0 drop-shadow-[0_0_12px_rgba(255,197,0,0.8)]" size={28} />
+              <span className="text-white text-lg md:text-xl font-semibold"><strong>Bônus 3:</strong> Rotina de Treino (30 min/dia para evoluir rápido)</span>
             </li>
             <li className="flex items-center gap-5">
-              <RefreshCcw className="text-[#00E575] shrink-0 drop-shadow-[0_0_15px_rgba(0,229,117,0.9)]" size={40} />
-              <span className="text-white text-xl md:text-2xl font-bold">Acesso Vitalício + Atualizações sem custo</span>
+              <RefreshCcw className="text-[#00E575] shrink-0 drop-shadow-[0_0_15px_rgba(0,229,117,0.9)]" size={28} />
+              <span className="text-white text-lg md:text-xl font-bold">Acesso Vitalício + Atualizações sem custo</span>
             </li>
           </ul>
 
           <div className="border-t-2 border-[#333] pt-12 mb-12 flex flex-col items-center">
             <div className="text-[#00E575] drop-shadow-[0_0_30px_rgba(0,229,117,0.8)] leading-none text-center">
-               <span className="font-black text-[100px] md:text-[140px] tracking-tighter">R$ 12,90</span>
+               <span className="font-black text-[64px] md:text-[90px] tracking-tighter">R$ 12,90</span>
             </div>
             <p className="text-white uppercase tracking-widest text-2xl md:text-3xl font-black mt-4 drop-shadow-md">Pagamento Único</p>
           </div>
@@ -328,9 +354,9 @@ function FaqSection() {
   };
 
   return (
-    <section className="w-full bg-[#1A1A1A] py-24 px-4 text-white relative border-t-2 border-[#FFC500]/20">
+    <section className="w-full bg-[#1A1A1A] py-16 px-4 text-white relative border-t-2 border-[#FFC500]/20">
       <div className="max-w-4xl mx-auto relative z-10">
-        <h2 className="text-3xl md:text-5xl font-black text-center mb-16 uppercase tracking-wide text-white drop-shadow-md">
+        <h2 className="text-2xl md:text-4xl font-black text-center mb-16 uppercase tracking-wide text-white drop-shadow-md">
           Ainda tem dúvidas?
         </h2>
 
@@ -344,7 +370,7 @@ function FaqSection() {
                 onClick={() => toggle(i)}
                 className="w-full flex items-center justify-between py-6 md:py-8 text-left group"
               >
-                <span className="text-xl md:text-2xl font-black pr-6 text-white group-hover:text-[#FFC500] transition-colors drop-shadow-sm">
+                <span className="text-lg md:text-xl font-black pr-6 text-white group-hover:text-[#FFC500] transition-colors drop-shadow-sm">
                   {faq.q}
                 </span>
                 <ChevronDown 
