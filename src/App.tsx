@@ -88,7 +88,7 @@ function HeroSection() {
 
         {/* CTA Button */}
         <motion.button 
-          onClick={() => window.open('https://pay.wiapy.com/ZtGdHhm7C6', '_blank')}
+          onClick={() => document.getElementById('oferta')?.scrollIntoView({ behavior: 'smooth' })}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="bg-[#FFC500] text-black font-black text-lg md:text-xl px-10 py-5 rounded-md uppercase tracking-widest
@@ -128,9 +128,9 @@ function PainSection() {
 
           <div className="flex flex-col items-center bg-[#080C0A] p-6 md:p-10 rounded-2xl border-t-4 border-[#00E575] shadow-[0_0_30px_rgba(0,0,0,0.8)]">
             <XCircle size={48} className="text-[#00E575] drop-shadow-[0_0_25px_rgba(0,229,117,1)] mb-8" />
-            <h3 className="text-lg md:text-xl font-black text-white mb-6 uppercase tracking-wider text-center drop-shadow-sm">Erros Bobos e Suicídios</h3>
+            <h3 className="text-lg md:text-xl font-black text-white mb-6 uppercase tracking-wider text-center drop-shadow-sm">Erros Bobos e Caçapadas Involuntárias</h3>
             <p className="text-white font-medium text-lg leading-relaxed text-center">
-              Você perde a vez porque o bolão sempre para colado na tabela ou cai na caçapa junto com a bola da vez.
+              Você perde a vez porque o bolão sempre para colado na tabela ou cai na caçapa junto com a bola numerada.
             </p>
           </div>
 
@@ -242,7 +242,7 @@ function SocialProofSection() {
 
 function FinalOfferSection() {
   return (
-    <section className="w-full relative py-20 px-4 overflow-hidden bg-[#080C0A]">
+    <section id="oferta" className="w-full relative py-20 px-4 overflow-hidden bg-[#080C0A]">
       <TextureOverlay />
       
       <div className="relative z-10 max-w-4xl mx-auto text-center">
