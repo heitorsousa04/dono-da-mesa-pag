@@ -289,7 +289,7 @@ function FinalOfferSection() {
 
           {/* Pulsing Vibrant Green CTA Button */}
           <motion.button 
-            onClick={() => window.open('https://pay.wiapy.com/ZtGdHhm7C6', '_blank')}
+            onClick={() => { window.location.href = 'https://pay.wiapy.com/ZtGdHhm7C6'; }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             animate={{
