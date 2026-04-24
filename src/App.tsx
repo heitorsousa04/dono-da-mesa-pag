@@ -89,7 +89,10 @@ function HeroSection() {
 
         {/* CTA Button */}
         <motion.button 
-          onClick={() => document.getElementById('oferta')?.scrollIntoView({ behavior: 'smooth' })}
+          onClick={() => {
+            const params = new URLSearchParams(window.location.search).toString();
+            window.location.href = `https://pay.wiapy.com/ZtGdHhm7C6${params ? '?' + params : ''}`;
+          }}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="bg-[#FFC500] text-black font-black text-lg md:text-xl px-10 py-5 rounded-md uppercase tracking-widest
@@ -290,7 +293,10 @@ function FinalOfferSection() {
 
           {/* Pulsing Vibrant Green CTA Button */}
           <motion.button 
-            onClick={() => { window.location.href = 'https://pay.wiapy.com/ZtGdHhm7C6'; }}
+            onClick={() => {
+              const params = new URLSearchParams(window.location.search).toString();
+              window.location.href = `https://pay.wiapy.com/ZtGdHhm7C6${params ? '?' + params : ''}`;
+            }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             animate={{
