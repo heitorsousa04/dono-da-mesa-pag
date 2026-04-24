@@ -41,8 +41,6 @@ function HeroSection() {
           <img 
             src="https://res.cloudinary.com/dtcjxw6ax/image/upload/q_auto/f_auto/v1776898098/Professional_gaming_logo_202604201552_z9i3rr.jpg" 
             alt="Dono da Mesa"
-            loading="eager"
-            fetchPriority="high"
             className="w-48 md:w-64 mx-auto" 
           />
         </div>
@@ -180,9 +178,9 @@ function SolutionSection() {
           {topics.map((item, i) => (
             <motion.div 
               key={i}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              viewport={{ once: true, amount: 0.1 }}
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.3 }}
               className="flex items-center gap-6 bg-[#1A1A1A] p-6 md:p-8 rounded-md border border-[#333]"
             >
