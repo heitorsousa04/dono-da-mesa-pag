@@ -289,30 +289,22 @@ function FinalOfferSection() {
           </div>
 
           {/* Pulsing Vibrant Green CTA Button */}
-          <motion.button 
-            onClick={() => {
-              const params = new URLSearchParams(window.location.search).toString();
-              window.location.href = `https://pay.wiapy.com/ZtGdHhm7C6${params ? '?' + params : ''}`;
-            }}
+          <motion.a
+            href={`https://pay.wiapy.com/ZtGdHhm7C6${typeof window !== 'undefined' && window.location.search ? window.location.search : ''}`}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             animate={{
               boxShadow: [
-                "0px 0px 0px 0px rgba(0, 229, 117, 0)", 
-                "0px 0px 40px 15px rgba(0, 229, 117, 0.5)", 
-                "0px 0px 0px 0px rgba(0, 229, 117, 0)"
+                "0px 0px 0px 0px rgba(0, 229, 117, 0)",
+                "0px 0px 40px 15px rgba(0, 229, 117, 0.5)",
+                "0px 0px 0px 0px rgba(0, 229, 117, 0)",
               ],
             }}
-            transition={{
-              boxShadow: {
-                duration: 2,
-                repeat: Infinity,
-              }
-            }}
-            className="w-full mx-auto block bg-[#00E575] text-black font-black text-xl md:text-3xl px-12 py-10 rounded-md uppercase tracking-widest hover:bg-[#00ff83] transition-colors mb-12 border-b-8 border-[#00a353]"
+            transition={{ boxShadow: { duration: 2, repeat: Infinity } }}
+            className="w-full mx-auto block bg-[#00E575] text-black font-black text-xl md:text-3xl px-12 py-10 rounded-md uppercase tracking-widest hover:bg-[#00ff83] transition-colors mb-12 border-b-8 border-[#00a353] text-center"
           >
             Quero Garantir Meu Acesso
-          </motion.button>
+          </motion.a>
           
           {/* Footer of the card */}
           <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row items-center justify-center gap-8 text-[#00E575] font-black text-lg md:text-xl max-w-2xl mx-auto border-t border-[#333] pt-8">
