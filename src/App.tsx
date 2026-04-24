@@ -89,15 +89,15 @@ function HeroSection() {
         </p>
 
         {/* CTA Button */}
-        <motion.a 
-          href="https://pay.wiapy.com/ZtGdHhm7C6"
+        <motion.button 
+          onClick={() => document.getElementById('oferta')?.scrollIntoView({ behavior: 'smooth' })}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="block bg-[#FFC500] text-black font-black text-lg md:text-xl px-10 py-5 rounded-md uppercase tracking-widest
+          className="bg-[#FFC500] text-black font-black text-lg md:text-xl px-10 py-5 rounded-md uppercase tracking-widest
                      shadow-[0_0_30px_rgba(255,197,0,0.6)] hover:bg-[#ffce33] transition-all w-fit mx-auto border-b-4 border-[#cc9e00] text-center"
         >
           Quero Dominar a Mesa Agora
-        </motion.a>
+        </motion.button>
       </div>
     </section>
   );
