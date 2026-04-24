@@ -58,10 +58,11 @@ function HeroSection() {
         }}>
           <video
             src="https://res.cloudinary.com/dtcjxw6ax/video/upload/q_auto/f_auto/v1777046733/Vsl_Prod_Sin_jaxlod.mp4"
+            poster="https://res.cloudinary.com/dtcjxw6ax/image/upload/q_auto/f_auto/v1777065293/Billiard_table_with_202604241814_x527yg.jpg"
             muted
             playsInline
             loop
-            preload="none"
+            preload="metadata"
             disablePictureInPicture
             controlsList="nodownload nofullscreen noremoteplayback noplaybackrate"
             onContextMenu={(e) => e.preventDefault()}
