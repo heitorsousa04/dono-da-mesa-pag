@@ -89,10 +89,7 @@ function HeroSection() {
 
         {/* CTA Button */}
         <motion.button 
-          onClick={() => {
-            const params = new URLSearchParams(window.location.search).toString();
-            window.location.href = `https://pay.wiapy.com/ZtGdHhm7C6${params ? '?' + params : ''}`;
-          }}
+          onClick={() => document.getElementById('oferta')?.scrollIntoView({ behavior: 'smooth' })}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="bg-[#FFC500] text-black font-black text-lg md:text-xl px-10 py-5 rounded-md uppercase tracking-widest
