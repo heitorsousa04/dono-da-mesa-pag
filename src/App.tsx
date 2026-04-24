@@ -396,14 +396,73 @@ function FaqSection() {
   );
 }
 
+function AnnouncementBar() {
+  return (
+    <div className="w-full bg-[#FFC500] text-black text-center py-3 px-4 font-black text-sm md:text-base uppercase tracking-widest">
+      🎱 Chega de ser o cara que paga a mesa pro vencedor — aprenda a dominar o jogo
+    </div>
+  );
+}
+
+function BonusSection() {
+  const bonuses = [
+    { title: "Bônus 1: O Jogo Mental", desc: "Como vencer a pressão e nunca mais tremer na hora decisiva", value: "R$27,00" },
+    { title: "Bônus 2: Estratégia Avançada", desc: "Leitura de jogo e como prever os movimentos do adversário", value: "R$27,00" },
+    { title: "Bônus 3: Rotina de Treino", desc: "30 min/dia para evoluir rápido e consistente", value: "R$27,00" },
+  ];
+  return (
+    <section className="w-full bg-[#080C0A] py-16 px-4 text-white relative border-t-2 border-[#FFC500]/20">
+      <TextureOverlay />
+      <div className="max-w-4xl mx-auto relative z-10 text-center">
+        <h2 className="text-2xl md:text-4xl font-black text-[#FFC500] mb-4 drop-shadow-[0_0_15px_rgba(255,197,0,0.5)]">
+          🎁 Bônus Exclusivos Inclusos
+        </h2>
+        <p className="text-white text-lg mb-12 font-semibold">Você leva tudo isso junto, sem pagar nada a mais:</p>
+        <div className="flex flex-col gap-6">
+          {bonuses.map((b, i) => (
+            <div key={i} className="flex items-start gap-6 bg-[#1A1A1A] border border-[#FFC500]/30 rounded-xl p-6 text-left">
+              <span className="text-[#FFC500] font-black text-3xl shrink-0">+</span>
+              <div className="flex-1">
+                <h3 className="text-[#FFC500] font-black text-lg md:text-xl mb-1">{b.title}</h3>
+                <p className="text-white font-medium">{b.desc}</p>
+              </div>
+              <div className="text-right shrink-0">
+                <p className="text-white/40 text-sm line-through">{b.value}</p>
+                <p className="text-[#00E575] font-black">GRÁTIS</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function GuaranteeSection() {
+  return (
+    <section className="w-full bg-[#1A1A1A] py-16 px-4 text-white relative border-t-2 border-[#00E575]/20">
+      <div className="max-w-3xl mx-auto text-center relative z-10">
+        <div className="text-6xl mb-6">🛡️</div>
+        <h2 className="text-2xl md:text-4xl font-black text-white mb-4">Garantia Incondicional de 7 Dias</h2>
+        <p className="text-white text-lg font-medium leading-relaxed">
+          Acesse o guia, aplique as técnicas na mesa e veja a diferença. Se por qualquer motivo você não ficar satisfeito nos primeiros 7 dias, devolvemos seu dinheiro. Sem perguntas, sem burocracia.
+        </p>
+      </div>
+    </section>
+  );
+}
+
 export default function App() {
   return (
     <div className="min-h-screen font-sans bg-[#080C0A] text-white selection:bg-[#00E575] selection:text-black">
+      <AnnouncementBar />
       <HeroSection />
       <PainSection />
       <SolutionSection />
       <SocialProofSection />
+      <BonusSection />
       <FinalOfferSection />
+      <GuaranteeSection />
       <FaqSection />
     </div>
   );
