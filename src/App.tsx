@@ -57,7 +57,7 @@ function HeroSection() {
           else { video.pause(); setPlaying(false); }
         }}>
           <video
-            src="https://res.cloudinary.com/dtcjxw6ax/video/upload/q_auto/f_auto/v1776898182/VSL_PROD_SIN_mjzmsi.mov"
+            src="https://res.cloudinary.com/dtcjxw6ax/video/upload/q_auto/f_auto/v1777046733/Vsl_Prod_Sin_jaxlod.mp4"
             muted
             playsInline
             loop
