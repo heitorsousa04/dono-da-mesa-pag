@@ -61,6 +61,7 @@ function HeroSection() {
             muted
             playsInline
             loop
+            preload="none"
             disablePictureInPicture
             controlsList="nodownload nofullscreen noremoteplayback noplaybackrate"
             onContextMenu={(e) => e.preventDefault()}
