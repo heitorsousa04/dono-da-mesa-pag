@@ -341,12 +341,12 @@ function GuaranteeSection() {
           Aplica os fundamentos na mesa. Se não sentir diferença nos primeiros 7 dias, devolvemos seu dinheiro. Sem perguntas, sem complicação. O risco é todo nosso.
         </p>
         
-        <a
-          href="https://pay.wiapy.com/ZtGdHhm7C6"
+        <button
+          onClick={() => document.getElementById('oferta')?.scrollIntoView({ behavior: 'smooth' })}
           className="inline-flex items-center justify-center gap-2 rounded-md bg-[#eab308] text-black font-black text-base md:text-xl h-12 md:h-16 px-6 md:px-12 hover:scale-105 transition-transform shadow-[0_4px_15px_rgba(234,179,8,0.4)] uppercase tracking-wide"
         >
           COMPRAR COM SEGURANÇA
-        </a>
+        </button>
       </div>
     </section>
   );
