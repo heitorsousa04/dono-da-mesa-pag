@@ -120,18 +120,21 @@ function CarouselSection() {
 function BonusSection() {
   const bonuses = [
     {
-      img: "https://res.cloudinary.com/dtcjxw6ax/image/upload/q_auto/f_auto/v1777177509/Mente_de_Gladiador_202604260053_lfjugm.jpg",
-      title: "Mente de Gladiador",
+      img: "https://res.cloudinary.com/dtcjxw6ax/image/upload/q_auto/f_auto/v1777220096/Mente_de_Gladiador_202604261311_c8mwmx.jpg",
+      title: "Cabeça Fria",
+      desc: "Frieza e foco na hora que mais importa",
       price: "R$37"
     },
     {
-      img: "https://res.cloudinary.com/dtcjxw6ax/image/upload/q_auto/f_auto/v1777177512/Mente_de_Gladiador_202604260055_dlm1lz.jpg",
-      title: "Guia de Bolas Impossíveis",
+      img: "https://res.cloudinary.com/dtcjxw6ax/image/upload/q_auto/f_auto/v1777220099/Mente_de_Gladiador_202604261313_aom8cc.jpg",
+      title: "Mata Colada",
+      desc: "Bolas na tabela, bico e posições impossíveis",
       price: "R$37"
     },
     {
-      img: "https://res.cloudinary.com/dtcjxw6ax/image/upload/q_auto/f_auto/v1777177514/Mente_de_Gladiador_202604260057_hxr1yr.jpg",
-      title: "Truques de Mestre",
+      img: "https://res.cloudinary.com/dtcjxw6ax/image/upload/q_auto/f_auto/v1777220101/Mente_de_Gladiador_202604261314_ltogy4.jpg",
+      title: "Jump e Escape",
+      desc: "Salto, desvio e saída de sinuca fechada",
       price: "R$37"
     },
   ];
@@ -154,6 +157,7 @@ function BonusSection() {
                 </div>
                 <div className="px-1.5 py-1.5 md:p-3 text-center">
                   <h3 className="font-black text-[10px] md:text-base text-[#1a1a1a] leading-tight">{b.title}</h3>
+                  <p className="text-[9px] md:text-xs text-[#4b5563] leading-tight mt-0.5">{b.desc}</p>
                   <div className="mt-0.5">
                     <span className="text-gray-400 line-through text-[9px] md:text-xs">De {b.price}</span>
                     <span className="ml-1 text-[#16a34a] font-bold text-[10px] md:text-sm">GRÁTIS</span>
@@ -197,9 +201,9 @@ function OfferSection() {
                   "Plataforma digital organizada, acesse no celular, tablet ou PC",
                   "Conteúdo organizado por nível e pilares de aprendizado",
                   "Acesso imediato após o pagamento",
-                  "🎁 BÔNUS: Mente de Gladiador",
-                  "🎁 BÔNUS: Guia de Bolas Impossíveis",
-                  "🎁 BÔNUS: Truques de Mestre",
+                  "🎁 BÔNUS: Cabeça Fria",
+                  "🎁 BÔNUS: Mata Colada",
+                  "🎁 BÔNUS: Jump e Escape",
                   "Atualizações mensais",
                   "Suporte prioritário",
                   "🛡️ Garantia de 7 dias",
