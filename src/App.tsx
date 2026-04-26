@@ -230,10 +230,14 @@ function OfferSection() {
 // 8. TESTIMONIALS
 function TestimonialsSection() {
   const testimonials = [
-    "https://res.cloudinary.com/dtcjxw6ax/image/upload/q_auto/f_auto/v1776879501/Texto_do_seu_par%C3%A1grafo_20_pchrml.png",
-    "https://res.cloudinary.com/dtcjxw6ax/image/upload/q_auto/f_auto/v1776879503/Texto_do_seu_par%C3%A1grafo_21_l058lk.png",
-    "https://res.cloudinary.com/dtcjxw6ax/image/upload/q_auto/f_auto/v1776879506/Texto_do_seu_par%C3%A1grafo_22_zdxm9z.png",
-    "https://res.cloudinary.com/dtcjxw6ax/image/upload/q_auto/f_auto/v1776879508/Texto_do_seu_par%C3%A1grafo_23_srurxf.png",
+    "https://res.cloudinary.com/dtcjxw6ax/image/upload/q_auto/f_auto/v1777216337/Texto_do_seu_par%C3%A1grafo_w7f7ys.jpg",
+    "https://res.cloudinary.com/dtcjxw6ax/image/upload/q_auto/f_auto/v1777216342/Texto_do_seu_par%C3%A1grafo_1_ajjmft.jpg",
+    "https://res.cloudinary.com/dtcjxw6ax/image/upload/q_auto/f_auto/v1777216349/Texto_do_seu_par%C3%A1grafo_3_iffcr1.jpg",
+    "https://res.cloudinary.com/dtcjxw6ax/image/upload/q_auto/f_auto/v1777216351/Texto_do_seu_par%C3%A1grafo_4_zsgfoh.jpg",
+    "https://res.cloudinary.com/dtcjxw6ax/image/upload/q_auto/f_auto/v1777216347/Texto_do_seu_par%C3%A1grafo_2_zkfvb1.jpg",
+    "https://res.cloudinary.com/dtcjxw6ax/image/upload/q_auto/f_auto/v1777216354/Texto_do_seu_par%C3%A1grafo_5_j2pwzh.jpg",
+    "https://res.cloudinary.com/dtcjxw6ax/image/upload/q_auto/f_auto/v1777216360/Texto_do_seu_par%C3%A1grafo_7_nwlsqf.jpg",
+    "https://res.cloudinary.com/dtcjxw6ax/image/upload/q_auto/f_auto/v1777216357/Texto_do_seu_par%C3%A1grafo_6_k8xilf.jpg",
   ];
   const doubled = [...testimonials, ...testimonials, ...testimonials];
   return (
