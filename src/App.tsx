@@ -112,6 +112,14 @@ function CarouselSection() {
             ))}
           </div>
         </div>
+        <div className="text-center mt-6">
+          <button
+            onClick={() => document.getElementById('oferta')?.scrollIntoView({ behavior: 'smooth' })}
+            className="inline-flex items-center justify-center gap-2 rounded-md bg-[#16a34a] text-white font-black text-base md:text-xl h-12 md:h-16 px-6 md:px-12 hover:scale-105 transition-transform shadow-[0_4px_15px_rgba(22,163,74,0.4)] uppercase tracking-wide"
+          >
+            QUERO O MAPA DA TRANCADA
+          </button>
+        </div>
       </div>
     </section>
   );
@@ -300,6 +308,14 @@ function AuthorSection() {
               O <strong>feeling</strong> é o que te faz ganhar a resenha hoje, mas é o <strong>método</strong> que te faz ganhar o jogo rasgado amanhã. Quando o dinheiro está na mesa e o coro come, o chute falha porque o psicológico pesa. Aqui você aprende um <strong>ponto de referência palpável</strong>. Em vez de depender da imaginação, você vai saber exatamente onde o taco encosta na bola. O feeling é o seu dom, o método é a sua segurança para trancar o jogo sob pressão.
             </p>
           </div>
+        </div>
+        <div className="text-center mt-6">
+          <button
+            onClick={() => document.getElementById('oferta')?.scrollIntoView({ behavior: 'smooth' })}
+            className="inline-flex items-center justify-center gap-2 rounded-md bg-[#16a34a] text-white font-black text-base md:text-xl h-12 md:h-16 px-6 md:px-12 hover:scale-105 transition-transform shadow-[0_4px_15px_rgba(22,163,74,0.4)] uppercase tracking-wide"
+          >
+            QUERO VIRAR UM TACO FORTE
+          </button>
         </div>
       </div>
     </section>
