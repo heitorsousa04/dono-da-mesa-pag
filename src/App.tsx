@@ -7,9 +7,9 @@ export default function App() {
       <HeroSection />
       <MockupSection />
       <CTASection />
-      <CarouselSection />
-      <BonusSection />
       <OfferSection />
+      <BonusSection />
+      <CarouselSection />
       <TestimonialsSection />
       <AuthorSection />
       <FaqSection />
@@ -31,12 +31,13 @@ function HeroSection() {
           <span className="text-[#16a34a] font-bold text-[11px] md:text-base uppercase tracking-wide">DESCONTO SÓ HOJE</span>
         </div>
         <h1 className="text-2xl md:text-4xl lg:text-5xl font-black text-center mb-1.5 md:mb-4 leading-tight animate-fade-in text-[#1a1a1a]">
-          <span className="text-[#16a34a] drop-shadow-sm">+70 Técnicas, Fundamentos e Estratégias</span>{" "}
-          <span>para você virar um Taco Forte e dominar qualquer mesa de bar</span>{" "}
+          Quer virar um Taco Forte? Domine{" "}
+          <span className="text-[#16a34a] drop-shadow-sm">+70 técnicas de Mataria e Puxadinha</span>{" "}
+          <span>para soltar o braço e trancar a mesa</span>{" "}
           <span className="text-[#16a34a] font-black">+ Bônus</span>
         </h1>
         <p className="text-sm md:text-lg text-[#4b5563] text-center max-w-3xl mx-auto mb-1.5 leading-relaxed animate-fade-in">
-          O método completo com tudo que os grandes mestres usam. Postura, mira, puxadinha, controle de branca e muito mais. Sem enrolação, direto na mesa.
+          O mapa da sinuquinha direto no seu celular. Funciona em mesa de bar, com bola pesada e bico que rejeita.
         </p>
         <div className="flex justify-center">
           <svg onClick={() => document.getElementById('oferta')?.scrollIntoView({ behavior: 'smooth' })}
@@ -76,7 +77,7 @@ function CTASection() {
           onClick={() => document.getElementById('oferta')?.scrollIntoView({ behavior: 'smooth' })}
           className="inline-flex items-center justify-center gap-2 rounded-md bg-[#16a34a] text-white font-black text-base md:text-2xl h-12 md:h-20 px-5 md:px-12 animate-pulse-glow hover:scale-105 transition-transform shadow-[0_4px_15px_rgba(22,163,74,0.4)] uppercase tracking-wide"
         >
-          QUERO AGORA
+          VER OFERTA COMPLETA
         </button>
       </div>
     </section>
@@ -201,6 +202,7 @@ function OfferSection() {
                   "Plataforma digital organizada, acesse no celular, tablet ou PC",
                   "Conteúdo organizado por nível e pilares de aprendizado",
                   "Acesso imediato após o pagamento",
+                  "🎱 Método testado em mesa dura, bolão pesado e caçapa que rejeita",
                   "🎁 BÔNUS: Cabeça Fria",
                   "🎁 BÔNUS: Mata Colada",
                   "🎁 BÔNUS: Jump e Escape",
@@ -221,7 +223,7 @@ function OfferSection() {
                 href="https://pay.wiapy.com/ZtGdHhm7C6"
                 className="inline-flex items-center justify-center gap-2 rounded-md px-8 w-full bg-[#16a34a] text-white font-black text-sm md:text-base h-12 md:h-16 animate-pulse-scale hover:scale-105 transition-transform shadow-[0_4px_15px_rgba(22,163,74,0.4)] uppercase tracking-wide"
               >
-                QUERO SER UM TACO FORTE
+                QUERO SOLTAR A MATARIA
               </a>
             </div>
           </div>
@@ -293,8 +295,9 @@ function AuthorSection() {
                 </div>
               ))}
             </div>
-            <p className="text-sm md:text-base text-[#4b5563] italic leading-relaxed">
-              "Aprendi na raça, errando muito e assistindo os melhores. Coloquei tudo que funciona de verdade neste material. Sem enrolação, sem teoria que não serve na mesa."
+            <p className="text-sm md:text-base text-[#4b5563] leading-relaxed">
+              "Aprendi na raça, errando muito e assistindo os melhores. Coloquei tudo que funciona de verdade neste material. Sem enrolação, sem teoria que não serve na mesa."<br /><br />
+              O <strong>feeling</strong> é o que te faz ganhar a resenha hoje, mas é o <strong>método</strong> que te faz ganhar o jogo rasgado amanhã. Quando o dinheiro está na mesa e o coro come, o chute falha porque o psicológico pesa. Aqui você aprende um <strong>ponto de referência palpável</strong>. Em vez de depender da imaginação, você vai saber exatamente onde o taco encosta na bola. O feeling é o seu dom, o método é a sua segurança para trancar o jogo sob pressão.
             </p>
           </div>
         </div>
@@ -306,10 +309,10 @@ function AuthorSection() {
 // 10. FAQ
 function FaqSection() {
   const faqs = [
-    { q: "Funciona pra quem tá começando?", a: "Sim. Os fundamentos são a base que todo jogador precisa, do iniciante ao intermediário." },
+    { q: "Funciona pra quem tá começando?", a: "Sim! Se você é 'pato' na resenha e quer começar a passear com a branca e ser respeitado como um taco forte na sua região, este é o caminho mais rápido. Você vai aprender desde o básico do pêndulo até a malícia da sininha." },
     { q: "Como acesso o material?", a: "Assim que o pagamento é confirmado você recebe o acesso à plataforma digital organizada, disponível no celular, tablet ou computador." },
-    { q: "Preciso de mesa em casa pra aplicar?", a: "Não. Você leva os fundamentos pra qualquer mesa de bar." },
-    { q: "Tem atualizações?", a: "Sim. O conteúdo é atualizado mensalmente com novas técnicas e estratégias." },
+    { q: "Não dá pra aprender sinuca pelo celular?", a: "O Taco Forte não é um livrinho de teoria. É o seu mapa do tesouro para levar para a beira da mesa. Você vê a técnica no celular, ajusta a postura e aplica na hora. É como ter um mestre do seu lado dizendo: mantenha a cabeça baixa e não levante antes da bola cair." },
+    { q: "Funciona em mesa dura de bar?", a: "Foi feito pra isso. Você aprende a identificar o bico da caçapa que rejeita a bola e sabe exatamente onde bater para a tabela aceitar a jogada. Se a mesa é ruim para os outros, para você vira vantagem." },
     { q: "Como funciona a garantia?", a: "7 dias. Se não gostar por qualquer motivo, devolvemos seu dinheiro sem burocracia." },
   ];
   const [open, setOpen] = useState<number | null>(null);
