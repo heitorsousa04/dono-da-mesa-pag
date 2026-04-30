@@ -36,7 +36,7 @@ function HeroSection() {
           <span className="text-[#16a34a] font-black">+ BÔNUS</span>
         </h1>
         <p className="text-sm md:text-lg text-[#4b5563] text-center max-w-3xl mx-auto mb-1.5 leading-relaxed animate-fade-in">
-          O mapa da sinuquinha direto no seu celular. Funciona em mesa de bar, com bola pesada e bico que rejeita.
+          Os segredos que os tacos fortes do bar usam, explicados de forma simples pra você ver, entender e aplicar no mesmo dia.
         </p>
         <div className="flex justify-center">
           <svg onClick={() => document.getElementById('oferta')?.scrollIntoView({ behavior: 'smooth' })}
@@ -130,19 +130,19 @@ function BonusSection() {
     {
       img: "https://res.cloudinary.com/dtcjxw6ax/image/upload/q_auto/f_auto/v1777220096/Mente_de_Gladiador_202604261311_c8mwmx.jpg",
       title: "Cabeça Fria",
-      desc: "Frieza e foco na hora que mais importa",
+      desc: "Como manter a calma na hora que mais importa",
       price: "R$37"
     },
     {
       img: "https://res.cloudinary.com/dtcjxw6ax/image/upload/q_auto/f_auto/v1777220099/Mente_de_Gladiador_202604261313_aom8cc.jpg",
       title: "Mata Colada",
-      desc: "Bolas na tabela, bico e posições impossíveis",
+      desc: "Como encaçapar bolas coladas na tabela e no bico",
       price: "R$37"
     },
     {
       img: "https://res.cloudinary.com/dtcjxw6ax/image/upload/q_auto/f_auto/v1777220101/Mente_de_Gladiador_202604261314_ltogy4.jpg",
       title: "Jump e Escape",
-      desc: "Salto, desvio e saída de sinuca fechada",
+      desc: "Como sair de qualquer sinuca fechada",
       price: "R$37"
     },
   ];
@@ -303,8 +303,7 @@ function AuthorSection() {
               ))}
             </div>
             <p className="text-sm md:text-base text-[#4b5563] leading-relaxed">
-              "Aprendi na raça, errando muito e assistindo os melhores. Coloquei tudo que funciona de verdade neste material. Sem enrolação, sem teoria que não serve na mesa."<br /><br />
-              O <strong>feeling</strong> é o que te faz ganhar a resenha hoje, mas é o <strong>método</strong> que te faz ganhar o jogo rasgado amanhã. Quando o dinheiro está na mesa e o coro come, o chute falha porque o psicológico pesa. Aqui você aprende um <strong>ponto de referência palpável</strong>. Em vez de depender da imaginação, você vai saber exatamente onde o taco encosta na bola. O feeling é o seu dom, o método é a sua segurança para trancar o jogo sob pressão.
+              Aprendi na raça, errando muito e jogando com os melhores. Foram 12 anos de mesa pra descobrir o que realmente funciona, e coloquei tudo neste material. Sem enrolação, sem teoria que não serve no bar. Só o que faz diferença de verdade.
             </p>
           </div>
         </div>
