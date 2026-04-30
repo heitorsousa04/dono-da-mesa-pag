@@ -31,10 +31,9 @@ function HeroSection() {
           <span className="text-[#16a34a] font-bold text-[11px] md:text-base uppercase tracking-wide">DESCONTO SÓ HOJE</span>
         </div>
         <h1 className="text-2xl md:text-4xl lg:text-5xl font-black text-center mb-1.5 md:mb-4 leading-tight animate-fade-in text-[#1a1a1a]">
-          Quer virar um Taco Forte? Domine{" "}
-          <span className="text-[#16a34a] drop-shadow-sm">+70 técnicas de Mataria e Puxadinha</span>{" "}
-          <span>para soltar o braço e trancar a mesa</span>{" "}
-          <span className="text-[#16a34a] font-black">+ Bônus</span>
+          +70 TÉCNICAS PARA SE TORNAR UM{" "}
+          <span className="text-[#16a34a] drop-shadow-sm">TACO FORTE</span>{" "}
+          <span className="text-[#16a34a] font-black">+ BÔNUS</span>
         </h1>
         <p className="text-sm md:text-lg text-[#4b5563] text-center max-w-3xl mx-auto mb-1.5 leading-relaxed animate-fade-in">
           O mapa da sinuquinha direto no seu celular. Funciona em mesa de bar, com bola pesada e bico que rejeita.
