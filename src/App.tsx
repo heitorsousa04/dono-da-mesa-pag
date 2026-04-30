@@ -76,7 +76,7 @@ function CTASection() {
           onClick={() => document.getElementById('oferta')?.scrollIntoView({ behavior: 'smooth' })}
           className="inline-flex items-center justify-center gap-2 rounded-md bg-[#16a34a] text-white font-black text-base md:text-2xl h-12 md:h-20 px-5 md:px-12 animate-pulse-glow hover:scale-105 transition-transform shadow-[0_4px_15px_rgba(22,163,74,0.4)] uppercase tracking-wide"
         >
-          VER OFERTA COMPLETA
+          COMEÇAR AGORA
         </button>
       </div>
     </section>
