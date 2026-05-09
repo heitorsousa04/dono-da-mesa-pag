@@ -56,7 +56,7 @@ function MockupSection() {
     <section id="mockup-section" className="pt-0 pb-2 md:py-8 px-4 bg-white">
       <div className="max-w-3xl mx-auto">
         <img
-          src="https://res.cloudinary.com/dtcjxw6ax/image/upload/q_auto/f_auto/v1777177508/Notebook__tablet__celular_202604260047_t8nviq.jpg"
+          src="https://res.cloudinary.com/dxcrwyiv3/image/upload/v1778293766/Notebook__tablet__celular_202604260047_glywoj.jpg"
           alt="Taco Forte - Material digital completo"
           className="w-full rounded-xl shadow-2xl animate-scale-in"
           loading="eager"
@@ -86,16 +86,16 @@ function CTASection() {
 // 5. CAROUSEL — O QUE VOCÊ VAI RECEBER
 function CarouselSection() {
   const images = [
-    { src: "https://res.cloudinary.com/dtcjxw6ax/image/upload/q_auto/f_auto/v1777177521/Sinuca_material_digital_202604260114_ydy1ty.jpg", alt: "O Pêndulo" },
-    { src: "https://res.cloudinary.com/dtcjxw6ax/image/upload/q_auto/f_auto/v1777177523/Sinuca_material_digital_202604260116_hwfujd.jpg", alt: "A Mira da Tangente" },
-    { src: "https://res.cloudinary.com/dtcjxw6ax/image/upload/q_auto/f_auto/v1777177525/Sinuca_material_digital_202604260117_hqyikh.jpg", alt: "A Puxadinha" },
-    { src: "https://res.cloudinary.com/dtcjxw6ax/image/upload/q_auto/f_auto/v1777177527/Sinuca_material_digital_202604260119_bnudfl.jpg", alt: "Passeio com a Branca" },
-    { src: "https://res.cloudinary.com/dtcjxw6ax/image/upload/q_auto/f_auto/v1777177530/Sinuca_material_digital_202604260120_rqtyam.jpg", alt: "Jump Shot" },
-    { src: "https://res.cloudinary.com/dtcjxw6ax/image/upload/q_auto/f_auto/v1777177533/Sinuca_material_digital_202604260120_1_z8suuj.jpg", alt: "A Trancada" },
-    { src: "https://res.cloudinary.com/dtcjxw6ax/image/upload/q_auto/f_auto/v1777177535/Sinuca_material_digital_202604260121_dgaohp.jpg", alt: "A Ponte" },
-    { src: "https://res.cloudinary.com/dtcjxw6ax/image/upload/q_auto/f_auto/v1777177538/Sinuca_material_digital_202604260122_m6t5yu.jpg", alt: "A Pré-era" },
-    { src: "https://res.cloudinary.com/dtcjxw6ax/image/upload/q_auto/f_auto/v1777177541/Sinuca_material_digital_202604260123_eyebyj.jpg", alt: "A Sininha" },
-    { src: "https://res.cloudinary.com/dtcjxw6ax/image/upload/q_auto/f_auto/v1777177543/Sinuca_material_digital_202604260124_mjhpdn.jpg", alt: "Avaliação de Mesa" },
+    { src: "https://res.cloudinary.com/dxcrwyiv3/image/upload/v1778293785/Sinuca_material_digital_202604260114_lgw6oz.jpg", alt: "O Pêndulo" },
+    { src: "https://res.cloudinary.com/dxcrwyiv3/image/upload/v1778293788/Sinuca_material_digital_202604260116_vijqfg.jpg", alt: "A Mira da Tangente" },
+    { src: "https://res.cloudinary.com/dxcrwyiv3/image/upload/v1778293792/Sinuca_material_digital_202604260117_lvsldm.jpg", alt: "A Puxadinha" },
+    { src: "https://res.cloudinary.com/dxcrwyiv3/image/upload/v1778293794/Sinuca_material_digital_202604260119_zh4bes.jpg", alt: "Passeio com a Branca" },
+    { src: "https://res.cloudinary.com/dxcrwyiv3/image/upload/v1778293798/Sinuca_material_digital_202604260120_w3mhih.jpg", alt: "Jump Shot" },
+    { src: "https://res.cloudinary.com/dxcrwyiv3/image/upload/v1778293803/Sinuca_material_digital_202604260120_1_ufwwyj.jpg", alt: "A Trancada" },
+    { src: "https://res.cloudinary.com/dxcrwyiv3/image/upload/v1778293807/Sinuca_material_digital_202604260121_o6iyzd.jpg", alt: "A Ponte" },
+    { src: "https://res.cloudinary.com/dxcrwyiv3/image/upload/v1778293812/Sinuca_material_digital_202604260122_rq0x0p.jpg", alt: "A Pré-era" },
+    { src: "https://res.cloudinary.com/dxcrwyiv3/image/upload/v1778293815/Sinuca_material_digital_202604260123_dlxxxw.jpg", alt: "A Sininha" },
+    { src: "https://res.cloudinary.com/dxcrwyiv3/image/upload/v1778293819/Sinuca_material_digital_202604260124_bdcndd.jpg", alt: "Avaliação de Mesa" },
   ];
   const doubled = [...images, ...images];
   return (
@@ -128,19 +128,19 @@ function CarouselSection() {
 function BonusSection() {
   const bonuses = [
     {
-      img: "https://res.cloudinary.com/dtcjxw6ax/image/upload/q_auto/f_auto/v1777220096/Mente_de_Gladiador_202604261311_c8mwmx.jpg",
+      img: "https://res.cloudinary.com/dxcrwyiv3/image/upload/v1778293883/Mente_de_Gladiador_202604261311_n7vxev.jpg",
       title: "Cabeça Fria",
       desc: "Como manter a calma na hora que mais importa",
       price: "R$37"
     },
     {
-      img: "https://res.cloudinary.com/dtcjxw6ax/image/upload/q_auto/f_auto/v1777220099/Mente_de_Gladiador_202604261313_aom8cc.jpg",
+      img: "https://res.cloudinary.com/dxcrwyiv3/image/upload/v1778293888/Mente_de_Gladiador_202604261313_guo1mj.jpg",
       title: "Mata Colada",
       desc: "Como encaçapar bolas coladas na tabela e no bico",
       price: "R$37"
     },
     {
-      img: "https://res.cloudinary.com/dtcjxw6ax/image/upload/q_auto/f_auto/v1777220101/Mente_de_Gladiador_202604261314_ltogy4.jpg",
+      img: "https://res.cloudinary.com/dxcrwyiv3/image/upload/v1778293894/Mente_de_Gladiador_202604261314_azczx8.jpg",
       title: "Jump e Escape",
       desc: "Como sair de qualquer sinuca fechada",
       price: "R$37"
@@ -243,14 +243,14 @@ function OfferSection() {
 // 8. TESTIMONIALS
 function TestimonialsSection() {
   const testimonials = [
-    "https://res.cloudinary.com/dtcjxw6ax/image/upload/q_auto/f_auto/v1777216337/Texto_do_seu_par%C3%A1grafo_w7f7ys.jpg",
-    "https://res.cloudinary.com/dtcjxw6ax/image/upload/q_auto/f_auto/v1777216342/Texto_do_seu_par%C3%A1grafo_1_ajjmft.jpg",
-    "https://res.cloudinary.com/dtcjxw6ax/image/upload/q_auto/f_auto/v1777216349/Texto_do_seu_par%C3%A1grafo_3_iffcr1.jpg",
-    "https://res.cloudinary.com/dtcjxw6ax/image/upload/q_auto/f_auto/v1777216351/Texto_do_seu_par%C3%A1grafo_4_zsgfoh.jpg",
-    "https://res.cloudinary.com/dtcjxw6ax/image/upload/q_auto/f_auto/v1777216347/Texto_do_seu_par%C3%A1grafo_2_zkfvb1.jpg",
-    "https://res.cloudinary.com/dtcjxw6ax/image/upload/q_auto/f_auto/v1777216354/Texto_do_seu_par%C3%A1grafo_5_j2pwzh.jpg",
-    "https://res.cloudinary.com/dtcjxw6ax/image/upload/q_auto/f_auto/v1777216360/Texto_do_seu_par%C3%A1grafo_7_nwlsqf.jpg",
-    "https://res.cloudinary.com/dtcjxw6ax/image/upload/q_auto/f_auto/v1777216357/Texto_do_seu_par%C3%A1grafo_6_k8xilf.jpg",
+    "https://res.cloudinary.com/dxcrwyiv3/image/upload/v1778293844/Texto_do_seu_par%C3%A1grafo_xxvqgr.jpg",
+    "https://res.cloudinary.com/dxcrwyiv3/image/upload/v1778293848/Texto_do_seu_par%C3%A1grafo_1_isinux.jpg",
+    "https://res.cloudinary.com/dxcrwyiv3/image/upload/v1778293852/Texto_do_seu_par%C3%A1grafo_2_yfkkjd.jpg",
+    "https://res.cloudinary.com/dxcrwyiv3/image/upload/v1778293857/Texto_do_seu_par%C3%A1grafo_3_ijg9ph.jpg",
+    "https://res.cloudinary.com/dxcrwyiv3/image/upload/v1778293861/Texto_do_seu_par%C3%A1grafo_4_fbavhy.jpg",
+    "https://res.cloudinary.com/dxcrwyiv3/image/upload/v1778293866/Texto_do_seu_par%C3%A1grafo_5_mvvnuk.jpg",
+    "https://res.cloudinary.com/dxcrwyiv3/image/upload/v1778293870/Texto_do_seu_par%C3%A1grafo_6_cbktt6.jpg",
+    "https://res.cloudinary.com/dxcrwyiv3/image/upload/v1778293872/Texto_do_seu_par%C3%A1grafo_7_unqbbf.jpg",
   ];
   const doubled = [...testimonials, ...testimonials, ...testimonials];
   return (
@@ -280,7 +280,7 @@ function AuthorSection() {
         <div className="flex flex-col md:flex-row items-center gap-4 md:gap-10">
           <div className="shrink-0">
             <img
-              src="https://res.cloudinary.com/dtcjxw6ax/image/upload/q_auto/f_auto/v1777177517/Homem_segurando_taco_202604260103_zx0xkn.jpg"
+              src="https://res.cloudinary.com/dxcrwyiv3/image/upload/v1778293782/Homem_segurando_taco_202604260103_inxwjd.jpg"
               alt="Rafael Matos - Jogador e Instrutor de Sinuca"
               className="w-28 h-28 md:w-44 md:h-44 rounded-full object-cover border-4 border-[#16a34a] shadow-lg"
               loading="lazy"
