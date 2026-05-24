@@ -233,7 +233,7 @@ function OfferSection() {
                 onClick={(e) => { e.preventDefault(); setIsUpsellOpen(true); }}
                 className="inline-flex items-center justify-center gap-2 rounded-md px-8 w-full bg-[#16a34a] text-white font-black text-sm md:text-base h-12 md:h-16 animate-pulse-scale hover:scale-105 transition-transform shadow-[0_4px_15px_rgba(22,163,74,0.4)] uppercase tracking-wide"
               >
-                QUERO SOLTAR A MATARIA
+                QUERO DOMINAR A MESA
               </a>
             </div>
           </div>
@@ -315,7 +315,7 @@ function OfferSection() {
                   href="https://pay.wiapy.com/ZtGdHhm7C6"
                   className="inline-block text-[#9ca3af] underline text-xs md:text-sm hover:text-[#6b7280] transition-colors pb-2"
                 >
-                  Não, prefiro continuar sendo o pato da resenha por falta de malícia.
+                  Não, prefiro ficar sem mataria e continuar sendo o pato da resenha.
                 </a>
               </div>
             </div>
