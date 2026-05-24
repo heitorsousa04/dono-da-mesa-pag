@@ -187,6 +187,8 @@ function BonusSection() {
 
 // 7. OFFER
 function OfferSection() {
+  const [isUpsellOpen, setIsUpsellOpen] = useState(false);
+  
   return (
     <section id="oferta" className="py-4 md:py-20 px-4 bg-[#f0fdf4]">
       <div className="max-w-5xl mx-auto text-center">
@@ -228,6 +230,7 @@ function OfferSection() {
               
               <a
                 href="https://pay.wiapy.com/ZtGdHhm7C6"
+                onClick={(e) => { e.preventDefault(); setIsUpsellOpen(true); }}
                 className="inline-flex items-center justify-center gap-2 rounded-md px-8 w-full bg-[#16a34a] text-white font-black text-sm md:text-base h-12 md:h-16 animate-pulse-scale hover:scale-105 transition-transform shadow-[0_4px_15px_rgba(22,163,74,0.4)] uppercase tracking-wide"
               >
                 QUERO SOLTAR A MATARIA
@@ -235,7 +238,78 @@ function OfferSection() {
             </div>
           </div>
         </div>
-      </div>
+
+        <div 
+          className={`fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 transition-opacity duration-300 ${isUpsellOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`} 
+          onClick={() => setIsUpsellOpen(false)}
+        >
+          <div 
+            className="bg-white border-4 border-[#16a34a] rounded-xl w-full max-w-[600px] max-h-[90vh] overflow-y-auto relative shadow-[0_10px_40px_rgba(0,0,0,0.2)] animate-fade-in text-center"
+            onClick={e => e.stopPropagation()}
+          >
+              <button 
+                className="absolute top-2 right-4 text-gray-400 hover:text-gray-800 text-3xl font-bold leading-none z-10 bg-transparent border-none"
+                onClick={() => setIsUpsellOpen(false)}
+              >
+                &times;
+              </button>
+              <div className="bg-[#f0fdf4] p-4 md:p-6 rounded-lg m-1 mt-6 md:mt-1">
+                <div className="inline-block bg-[#16a34a] text-white font-black px-4 py-1.5 rounded-full text-xs mb-4 uppercase tracking-wider">
+                  🎱 OFERTA ESPECIAL
+                </div>
+                <h2 className="text-xl md:text-[24px] font-black text-[#1a1a1a] mb-2 leading-tight">
+                  Espera! Não vai embora sem isso 👇
+                </h2>
+                <p className="text-[#4b5563] text-sm md:text-[16px] mb-6 leading-relaxed">
+                  Só hoje você leva o arsenal completo, os 5 materiais que os tacos fortes usam pra nunca ficar sem jogada.
+                </p>
+
+                <div className="grid grid-cols-2 gap-3 mb-6">
+                  <div className="bg-white rounded-lg p-2 shadow-sm border border-gray-100">
+                    <img src="https://i.imgur.com/iz68FLg.jpeg" alt="Puxadinha Avançada" className="w-full h-auto rounded block mb-2" />
+                    <p className="text-[#1a1a1a] text-xs font-bold m-0">Puxadinha Avançada</p>
+                  </div>
+                  <div className="bg-white rounded-lg p-2 shadow-sm border border-gray-100">
+                    <img src="https://i.imgur.com/VsQcWXT.jpeg" alt="Trancada Completa" className="w-full h-auto rounded block mb-2" />
+                    <p className="text-[#1a1a1a] text-xs font-bold m-0">Trancada Completa</p>
+                  </div>
+                  <div className="bg-white rounded-lg p-2 shadow-sm border border-gray-100">
+                    <img src="https://i.imgur.com/Tilqtzk.jpeg" alt="Fora do Bico" className="w-full h-auto rounded block mb-2" />
+                    <p className="text-[#1a1a1a] text-xs font-bold m-0">Fora do Bico</p>
+                  </div>
+                  <div className="bg-white rounded-lg p-2 shadow-sm border border-gray-100">
+                    <img src="https://i.imgur.com/9jWxb3i.jpeg" alt="Armadilhas e Defesa" className="w-full h-auto rounded block mb-2" />
+                    <p className="text-[#1a1a1a] text-xs font-bold m-0">Armadilhas e Defesa</p>
+                  </div>
+                  <div className="bg-white rounded-lg p-2 shadow-sm border border-gray-100 col-span-2 mx-auto w-[70%]">
+                    <img src="https://i.imgur.com/VHHk86T.jpeg" alt="Jogo Rasgado" className="w-full h-auto rounded block mb-2" />
+                    <p className="text-[#1a1a1a] text-xs font-bold m-0">Jogo Rasgado</p>
+                  </div>
+                </div>
+
+                <div className="mb-5">
+                  <span className="line-through text-[#9ca3af] text-lg block mb-0.5">R$127,90</span>
+                  <h3 className="text-[#16a34a] text-3xl md:text-[42px] font-black m-0 leading-none">R$34,90</h3>
+                  <p className="text-[#4b5563] text-[13px] mt-2 font-medium">pagamento único, acesso imediato</p>
+                </div>
+
+                <a 
+                  href="https://pay.wiapy.com/RkBQqTSeKy" 
+                  className="flex items-center justify-center w-full bg-[#16a34a] text-white px-4 py-4 rounded-lg text-xs md:text-sm font-black uppercase tracking-wide shadow-[0_4px_15px_rgba(22,163,74,0.3)] hover:scale-105 transition-all mb-4"
+                >
+                  QUERO SOLTAR A MATARIA COMPLETA &rarr;
+                </a>
+                
+                <a 
+                  href="https://pay.wiapy.com/ZtGdHhm7C6"
+                  className="inline-block text-[#9ca3af] underline text-xs md:text-sm hover:text-[#6b7280] transition-colors pb-2"
+                >
+                  Não, prefiro ficar só com o básico por R$12,90
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
     </section>
   );
 }
